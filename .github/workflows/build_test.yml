@@ -24,7 +24,7 @@ jobs:
   
     - name: Run Tests
       run: |
-        pytest manage.py test
+        python manage.py test
 
   deploy:
     needs: [test]
