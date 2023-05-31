@@ -31,8 +31,8 @@ jobs:
     - name: Generate Report
       run: |
         pip install coverage
-        coverage run manage.py test
-        coverage html
+        coverage run --source=app1,app2 ./manage.py test --settings=path.to.test_settings app1,app2
+
         
    # coverage run -m test
   #  - name: Upload Coverage to Codecov
