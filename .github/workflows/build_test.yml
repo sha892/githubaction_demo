@@ -31,7 +31,10 @@ jobs:
     - name: Generate Report
       run: |
         pip install coverage
-        coverage run --source=app1,app2 ./manage.py test --settings=path.to.test_settings app1,app2
+    - name: Python Django Coverage GitHub Action
+      uses: dc740/django-coveragepy-github-action@0.9
+
+# coverage run --source=app1,app2 ./manage.py test --settings=path.to.test_settings app1,app2
 
         
    # coverage run -m test
