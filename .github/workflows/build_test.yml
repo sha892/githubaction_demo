@@ -31,7 +31,7 @@ jobs:
     - name: Generate Report
       run: |
         pip install coverage
-        coverage run
+        coverage run --source=myapp,anotherapp --omit=*/migrations/* ./manage.py test
         
    # coverage run -m test
   #  - name: Upload Coverage to Codecov
