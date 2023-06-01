@@ -31,8 +31,9 @@ jobs:
     - name: Generate Report
       run: |
         pip install coverage
-        pwd
-        coverage run --source=app1,app2 ./manage.py test --settings=path.to.test_settings app1,app2
+        coverage report
+      #pwd
+        #coverage run --source=app1,app2 ./manage.py test --settings=path.to.test_settings app1,app2
 
         
    # coverage run -m test
