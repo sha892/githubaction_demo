@@ -32,9 +32,8 @@ jobs:
       run: |
         pip install coverage
         coverage run manage.py test && coverage report && coverage html
-        coverage run --data-file tests/.coverage -m pytest -s
-        coverage json --data-file tests/.coverage -o buf/tests/coverage.json
-        coverage report --data-file tests/.coverage
+        
+      
       #pwd
         #coverage run --source=app1,app2 ./manage.py test --settings=path.to.test_settings app1,app2
 
