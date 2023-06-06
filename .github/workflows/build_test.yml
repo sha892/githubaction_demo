@@ -32,11 +32,15 @@ jobs:
       run: |
         pip install coverage
         coverage run manage.py test && coverage report && coverage html
-    - name: Lint with pylint
+    - name: Lint with mypy
       run: |
-       pip install pylint
-       pylint .
-       ...
+        pip install mypy
+        mypy .
+        ...
+      
+       
+       
+     
         
           
     
