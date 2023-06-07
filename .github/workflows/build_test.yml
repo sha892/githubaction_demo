@@ -32,6 +32,7 @@ jobs:
       run: |
         pip install coverage
         coverage run manage.py test && coverage report && coverage html
+        pip install pylint
          - run: |
           shopt -s globstar && pylint --load-plugins pylint_django --django-settings-module=example.settings **/*.py
  # name: python-linter
